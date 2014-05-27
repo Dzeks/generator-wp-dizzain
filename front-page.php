@@ -3,8 +3,8 @@
  * Sue Mathys theme template for the front page.
  *
  * @package WordPress
- * @subpackage NUK
- * @since NUK 1.0
+ * @subpackage ThemeName
+ * @since ThemeName ThemeVersion
  */
 
 get_header(); ?>
