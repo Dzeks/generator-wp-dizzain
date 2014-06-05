@@ -3,7 +3,6 @@
  * Template Name: Narrow Page
  *
  * @package WordPress
- * @subpackage NUK
- * @since NUK 1.0
+ * @subpackage themeName
+ * @since themeName themeVersion
  */
-get_theme_part('page');

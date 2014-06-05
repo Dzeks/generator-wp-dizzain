@@ -6,11 +6,13 @@
  * -- miscellaneous filters/functions
  *
  * @package WordPress
- * @subpackage ThemeName
- * @since ThemeName ThemeVersion
+ * @subpackage themeName
+ * @since themeName themeVersion
+ *
+ * @to-do must be singleton class
  */
 
-class ThemeDomain_general {
+class themeNameSpace_general {
 
 	/**
 	 * Add general filters and actions and load additional modules
@@ -44,8 +46,6 @@ class ThemeDomain_general {
 	 * Creates a nicely formatted and more specific title element text
 	 * for output in head of document, based on current view.
 	 *
-	 * @since ThemeName ThemeVersion
-	 *
 	 * @param string $title Default title text for current view.
 	 * @param string $sep Optional separator.
 	 * @return string Filtered title.
@@ -66,9 +66,9 @@ class ThemeDomain_general {
 
 		// Add a page number if necessary.
 		if ( $paged >= 2 || $page >= 2 )
-			$title = "$title $sep " . sprintf( __( 'Page %s', 'ThemeDomain' ), max( $paged, $page ) );
+			$title = "$title $sep " . sprintf( __( 'Page %s', 'themeDomain' ), max( $paged, $page ) );
 
 		return $title;
 	}
 }
-new ThemeDomain_general;
+new themeNameSpace_general;

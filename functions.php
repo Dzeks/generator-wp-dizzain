@@ -1,18 +1,18 @@
 <?php
 /**
- * NUK theme setup
+ * themeName theme setup
  *
  * @package WordPress
- * @subpackage ThemeName
- * @since ThemeName ThemeVersion
+ * @subpackage themeName
+ * @since themeName themeVersion
  */
 
 /**
  * Set up theme defaults and registers support for various WordPress features.
  *
  */
-add_action( 'after_setup_theme', 'ThemeDomain_setup' );
-function ThemeDomain_setup() {
+add_action( 'after_setup_theme', 'themeNameSpace_setup' );
+function themeNameSpace_setup() {
 
 	/**
 	 * Require theme core files
@@ -36,7 +36,7 @@ function ThemeDomain_setup() {
 
 	// This theme uses wp_nav_menus() in one location.
 	register_nav_menus(array(
-		'primary' => __( 'Primary navigation', 'ThemeDomain' )
+		'primary' => __( 'Primary navigation', 'themeDomain' )
 	));
 
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
@@ -49,14 +49,14 @@ function ThemeDomain_setup() {
 /**
  * Register our sidebars and widgetized areas.
  *
- * @since ThemeName ThemeVersion
+ * @since themeName themeVersion
  */
-function ThemeDomain_widgets_init() {
+function themeNameSpace_widgets_init() {
 
 	register_sidebar( array(
 		'name' => 'Main Sidebar',
 		'id' => 'sidebar-1',
-		'description' => __( 'Main theme sidebar.', 'ThemeDomain' ),
+		'description' => __( 'Main theme sidebar.', 'themeDomain' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
@@ -64,4 +64,4 @@ function ThemeDomain_widgets_init() {
 	) );
 
 }
-add_action( 'widgets_init', 'ThemeDomain_widgets_init' );
+add_action( 'widgets_init', 'themeNameSpace_widgets_init' );

@@ -3,17 +3,17 @@
  * General meta boxes
  *
  * @package WordPress
- * @subpackage ThemeName
- * @since ThemeName ThemeVersion
+ * @subpackage themeName
+ * @since themeName themeVersion
  */
 
-add_filter( 'populate_theme_meta_boxes', 'ThemeDomain_populate_meta_boxes' );
-function ThemeDomain_populate_meta_boxes( $meta_boxes = array() ) {
+add_filter( 'populate_theme_meta_boxes', 'themeNameSpace_populate_meta_boxes' );
+function themeNameSpace_populate_meta_boxes( $meta_boxes = array() ) {
 
 	$prefix = 'page_';
 	$meta_boxes[] = array(
 		'id'       => 'page_meta',
-		'title'    => __( 'Attributes', 'ThemeDomain' ),
+		'title'    => __( 'Attributes', 'themeDomain' ),
 		'pages'    => array( 'page' ),
 		'context'  => 'normal',
 		'priority' => 'high',
@@ -25,7 +25,7 @@ function ThemeDomain_populate_meta_boxes( $meta_boxes = array() ) {
 				'choices'     => array( 
 					array(
 						'value'       => '1',
-						'label'       => __( 'Hide Title', 'ThemeDomain' ),
+						'label'       => __( 'Hide Title', 'themeDomain' ),
 					),
 				)
 			),

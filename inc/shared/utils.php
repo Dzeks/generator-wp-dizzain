@@ -3,7 +3,7 @@
  * Theme utilities functions
  *
  * @package WordPress
- * @subpackage theme_name
+ * @subpackage themeName
  */
 
 

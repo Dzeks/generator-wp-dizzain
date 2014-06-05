@@ -1,10 +1,10 @@
 <?php
 /**
- * Template for displayin one post on archive pages
+ * Template for displaying one post on archive pages
  *
  * @package WordPress
- * @subpackage ThemeName
- * @since ThemeName ThemeVersion
+ * @subpackage themeName
+ * @since themeName themeVersion
  */
 ?><article <?php post_class(); ?>>
 	<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'thumbnail' ) ); ?>

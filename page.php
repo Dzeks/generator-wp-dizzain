@@ -3,8 +3,8 @@
  * The template for displaying all pages.
  *
  * @package WordPress
- * @subpackage ThemeName
- * @since ThemeName ThemeVersion
+ * @subpackage themeName
+ * @since themeName themeVersion
  */
 get_header(); ?>
 	<div id="primary" class="content-area">

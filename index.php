@@ -4,8 +4,8 @@
  * By default this template is used for all blog pages
  *
  * @package WordPress
- * @subpackage ThemeName
- * @since ThemeName ThemeVersion
+ * @subpackage themeName
+ * @since themeName themeVersion
  */
 get_header(); ?>
 

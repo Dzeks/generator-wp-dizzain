@@ -3,6 +3,10 @@
  * Register meta boxes
  * Including the meta boxes class
  * Meta boxes are added using options tree plugin
+ *
+ * @package WordPress
+ * @subpackage meta boxes
+ * @since meta boxes 1.0
  */
 
 /**

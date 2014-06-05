@@ -4,10 +4,11 @@
  * Initialize theme options amd meta boxes
  *
  * @package WordPress
- * @subpackage NUK
+ * @subpackage themeName
+ * @since themeName themeVersion
  */
 
-class ThemeDomain_shared {
+class themeNameSpace_shared {
 
 	function __construct() {
 		$this->include_modules();
@@ -27,4 +28,4 @@ class ThemeDomain_shared {
 	}
 }
 
-new ThemeDomain_shared;
+new themeNameSpace_shared;

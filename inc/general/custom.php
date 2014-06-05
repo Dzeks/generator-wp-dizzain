@@ -3,15 +3,15 @@
  * Non Grouped template available functions
  *
  * @package WordPress
- * @subpackage ThemeName
- * @since ThemeName ThemeVersion
+ * @subpackage themeName
+ * @since themeName themeVersion
  */
 
 /* Enabling theme options */
-function get_ThemeDomain_option( $key, $default = '' ) {
+function get_themeNameSpace_option( $key, $default = '' ) {
 	return apply_filters( 'theme_option', $default, $key );
 }
-function ThemeDomain_option( $key, $default = '' ) {
+function themeNameSpace_option( $key, $default = '' ) {
 	echo apply_filters( 'theme_option', $default, $key );
 }
 
@@ -39,6 +39,6 @@ function set_comment_length($length) {
 /**
  * Returns a "Continue Reading" link for excerpts
  */
-function ThemeDomain_continue_reading_link() {
-	return ( 'episode' == get_post_type() ) ? '' : ' <a class="continue-reading" href="'. esc_url( get_permalink() ) . '">' . __( 'Continue Reading &raquo;', 'ThemeDomain' ) .'</a>';
+function themeNameSpace_continue_reading_link() {
+	return ( 'episode' == get_post_type() ) ? '' : ' <a class="continue-reading" href="'. esc_url( get_permalink() ) . '">' . __( 'Continue Reading &raquo;', 'themeDomain' ) .'</a>';
 }

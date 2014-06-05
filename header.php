@@ -4,8 +4,8 @@
  *
  *
  * @package WordPress
- * @subpackage ThemeName
- * @since ThemeName ThemeVersion
+ * @subpackage themeName
+ * @since themeName themeVersion
  */
 ?><!DOCTYPE html>
 <!--[if IE 7]>
@@ -35,6 +35,6 @@
 		<div class="site-title"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/images/logo.png' ?>" alt="<?php bloginfo( 'name' ); ?>" /></a></div>
 	</div>
 
-	<div class="site-navigation"  role="navigation" id="js-primary-site-navigation">
-		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'container' => false, 'depth' => 2, 'walker' => new Primary_Walker_Nav_Menu ) ); ?>
+	<div class="site-navigation"  role="navigation">
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'container' => false ) ); ?>
 	</div>
