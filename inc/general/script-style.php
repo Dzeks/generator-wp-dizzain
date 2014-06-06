@@ -20,6 +20,10 @@ function ThemeDomain_scripts_styles() {
 
 	// Google Font include example
 	// wp_enqueue_style( 'themeNameSpace-font', add_query_arg( 'family', 'Dosis:200,300,400,500,600,700,800', "//fonts.googleapis.com/css" ) );
+
+	// Livereload for localhost only
+	if ( strpos( home_url(), 'localhost' ) )
+		wp_enqueue_script( 'livereload', '//localhost:35729/livereload.js' );
 };
 add_action('wp_enqueue_scripts', 'themeNameSpace_scripts_styles');
 
