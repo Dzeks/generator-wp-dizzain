@@ -12,13 +12,13 @@
     "grunt-newer": "~0.6.0",
   },
   "build": {
-    "css": "inc/assets/css/",
-    "js": "inc/assets/js/",
-    "images": "inc/assets/images/"
+    "css": "../css/",
+    "js": "../js/",
+    "images": "../images/"
   },
   "src": {
-    "scss": "inc/assets/src/scss/",
-    "js": "inc/assets/src/js/",
-    "images": "inc/assets/src/images/"
+    "scss": "scss/",
+    "js": "js/",
+    "images": "images/"
   }
 }
