@@ -1,6 +1,6 @@
 <?php
 /**
- * Sue Mathys theme template for the front page.
+ * themeName theme template for the front page.
  *
  * @package WordPress
  * @subpackage themeName

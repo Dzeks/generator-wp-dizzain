@@ -129,8 +129,6 @@ if ( is_admin() ) {
 	// Enable Theme mode
 	add_filter( 'ot_theme_mode', '__return_true' );
 
-	include_once( get_template_directory() . '/inc/shared/sortable-options/sortable.php' );
-
 	// Include OptionTree after providing all necessary filters
 	include_once( get_template_directory() . '/option-tree/ot-loader.php' );
 }
