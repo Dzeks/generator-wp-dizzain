@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage ThemeName
- * @since ThemeName ThemeVersion
+ * @since ThemeTitle ThemeVersion
  */
 ?>
 <form method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">

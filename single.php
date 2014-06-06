@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage ThemeName
- * @since ThemeName ThemeVersion
+ * @since ThemeTitle ThemeVersion
  */
 get_header(); ?>
 	<div id="primary" class="content-area">

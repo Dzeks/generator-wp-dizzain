@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage themeName
- * @since themeName themeVersion
+ * @since themeTitle themeVersion
  */
 ?><article <?php post_class(); ?>>
 	<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'thumbnail' ) ); ?>

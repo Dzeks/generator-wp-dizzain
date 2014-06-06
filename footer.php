@@ -4,11 +4,11 @@
  *
  * @package WordPress
  * @subpackage themeName
- * @since themeName themeVersion
+ * @since themeTitle themeVersion
  */
 ?>
 	<div class="site-footer">
-		<div class="copyright"><?php printf( get_themeNameSpace_option( 'site_copyright' ), date( 'Y' ) ); ?></div>
+		<div class="copyright"><?php printf( get_themeName_option( 'site_copyright' ), date( 'Y' ) ); ?></div>
 	</div>
 
 <?php wp_footer(); ?>

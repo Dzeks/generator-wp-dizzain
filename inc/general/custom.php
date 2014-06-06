@@ -4,14 +4,14 @@
  *
  * @package WordPress
  * @subpackage themeName
- * @since themeName themeVersion
+ * @since themeTitle themeVersion
  */
 
 /* Enabling theme options */
-function get_themeNameSpace_option( $key, $default = '' ) {
+function get_themeName_option( $key, $default = '' ) {
 	return apply_filters( 'theme_option', $default, $key );
 }
-function themeNameSpace_option( $key, $default = '' ) {
+function themeName_option( $key, $default = '' ) {
 	echo apply_filters( 'theme_option', $default, $key );
 }
 

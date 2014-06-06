@@ -7,8 +7,8 @@
  * @since themeName themeVersion
  */
 
-add_filter( 'populate_theme_options', 'themeNameSpace_populate_general_options' );
-function themeNameSpace_populate_general_options( $settings = array() ) {
+add_filter( 'populate_theme_options', 'themeName_populate_general_options' );
+function themeName_populate_general_options( $settings = array() ) {
 
 	$settings['sections'][] = array(
 		'title' => __( 'General', 'themeDomain' ),

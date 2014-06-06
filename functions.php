@@ -4,15 +4,15 @@
  *
  * @package WordPress
  * @subpackage themeName
- * @since themeName themeVersion
+ * @since themeTitle themeVersion
  */
 
 /**
  * Set up theme defaults and registers support for various WordPress features.
  *
  */
-add_action( 'after_setup_theme', 'themeNameSpace_setup' );
-function themeNameSpace_setup() {
+add_action( 'after_setup_theme', 'themeName_setup' );
+function themeName_setup() {
 
 	/**
 	 * Require theme core files
@@ -51,7 +51,7 @@ function themeNameSpace_setup() {
  *
  * @since themeName themeVersion
  */
-function themeNameSpace_widgets_init() {
+function themeName_widgets_init() {
 
 	register_sidebar( array(
 		'name' => 'Main Sidebar',
@@ -64,4 +64,4 @@ function themeNameSpace_widgets_init() {
 	) );
 
 }
-add_action( 'widgets_init', 'themeNameSpace_widgets_init' );
+add_action( 'widgets_init', 'themeName_widgets_init' );

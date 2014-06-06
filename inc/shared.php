@@ -5,10 +5,10 @@
  *
  * @package WordPress
  * @subpackage themeName
- * @since themeName themeVersion
+ * @since themeTitle themeVersion
  */
 
-class themeNameSpace_shared {
+class themeName_shared {
 
 	function __construct() {
 		$this->include_modules();
@@ -28,4 +28,4 @@ class themeNameSpace_shared {
 	}
 }
 
-new themeNameSpace_shared;
+new themeName_shared;

@@ -5,7 +5,7 @@
  *
  * @package WordPress
  * @subpackage themeName
- * @since themeName themeVersion
+ * @since themeTitle themeVersion
  */
 ?><!DOCTYPE html>
 <!--[if IE 7]>

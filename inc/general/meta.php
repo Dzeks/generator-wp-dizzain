@@ -4,11 +4,11 @@
  *
  * @package WordPress
  * @subpackage themeName
- * @since themeName themeVersion
+ * @since themeTitle themeVersion
  */
 
-add_filter( 'populate_theme_meta_boxes', 'themeNameSpace_populate_meta_boxes' );
-function themeNameSpace_populate_meta_boxes( $meta_boxes = array() ) {
+add_filter( 'populate_theme_meta_boxes', 'themeName_populate_meta_boxes' );
+function themeName_populate_meta_boxes( $meta_boxes = array() ) {
 
 	$prefix = 'page_';
 	$meta_boxes[] = array(

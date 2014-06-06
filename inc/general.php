@@ -7,12 +7,12 @@
  *
  * @package WordPress
  * @subpackage themeName
- * @since themeName themeVersion
+ * @since themeTitle themeVersion
  *
  * @to-do must be singleton class
  */
 
-class themeNameSpace_general {
+class themeName_general {
 
 	/**
 	 * Add general filters and actions and load additional modules
@@ -71,4 +71,4 @@ class themeNameSpace_general {
 		return $title;
 	}
 }
-new themeNameSpace_general;
+new themeName_general;
