@@ -1,6 +1,6 @@
 <?php
 /**
- * NUK theme shared utilies
+ * themeTitle theme shared utilies
  * Initialize theme options amd meta boxes
  *
  * @package WordPress

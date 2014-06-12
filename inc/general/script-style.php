@@ -10,7 +10,7 @@
 /**
  * Register and enqueue some theme scripts and styles
  */
-function ThemeName_scripts_styles() {
+function themeName_scripts_styles() {
 
 	// Scripts
 	wp_enqueue_script( 'themeName', get_stylesheet_directory_uri() .'/inc/assets/js/themeName.js', array(), '1.0' , true );

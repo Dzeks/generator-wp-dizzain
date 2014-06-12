@@ -3,8 +3,8 @@
  * The template for displaying search forms
  *
  * @package WordPress
- * @subpackage ThemeName
- * @since ThemeTitle ThemeVersion
+ * @subpackage themeName
+ * @since themeTitle themeVersion
  */
 ?>
 <form method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">

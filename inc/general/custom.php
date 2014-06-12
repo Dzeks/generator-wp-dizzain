@@ -39,6 +39,6 @@ function set_comment_length($length) {
 /**
  * Returns a "Continue Reading" link for excerpts
  */
-function themeNameSpace_continue_reading_link() {
+function themeName_continue_reading_link() {
 	return ( 'episode' == get_post_type() ) ? '' : ' <a class="continue-reading" href="'. esc_url( get_permalink() ) . '">' . __( 'Continue Reading &raquo;', 'themeDomain' ) .'</a>';
 }

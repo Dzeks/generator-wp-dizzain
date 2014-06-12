@@ -3,8 +3,8 @@
  * Template for single post
  *
  * @package WordPress
- * @subpackage ThemeName
- * @since ThemeTitle ThemeVersion
+ * @subpackage themeName
+ * @since themeTitle themeVersion
  */
 get_header(); ?>
 	<div id="primary" class="content-area">
