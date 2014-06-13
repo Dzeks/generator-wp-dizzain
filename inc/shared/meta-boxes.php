@@ -2,7 +2,7 @@
 /**
  * Register meta boxes
  * Including the meta boxes class
- * Meta boxes are added using options tree plugin
+ * Meta boxes are added using optionstree plugin
  *
  * @package WordPress
  * @subpackage meta boxes
@@ -12,11 +12,13 @@
 /**
  * This module is backend only and for special pages
  */
-global $pagenow;
-if ( !is_admin() ) {
-
+if ( !is_admin() )
 	return;
-}
+
+
+if ( !file_exists( get_template_directory() . '/option-tree/ot-loader.php' ) )
+	wp_die('Please clone option-tree to the root directory from https://github.com/valendesigns/option-tree.git');
+
 
 // Hide the settings & documentation pages.
 add_filter( 'ot_show_pages', '__return_false' );

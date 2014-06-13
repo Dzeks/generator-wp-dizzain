@@ -5,21 +5,6 @@
  * Each theme option is retrieved via get_theme_option filter
  */
 
-
-// add_filter( 'get_theme_option', 'ot_get_theme_option_filter', 10, 2 );
-/**
- * Get theme option using options tree module
- * @param  mixed $default Default return value
- * @param  string $key    Option key
- * @return mixed          Option value
- */
-// function ot_get_theme_option_filter( $default = '', $key = '' ) {
-// 	if ( function_exists('ot_get_option') ) {
-// 		$default = ot_get_option($key, $default);
-// 	}
-// 	return $default;
-// }
-
 /**
  * Get options tree option
  * Options tree class is loaded for admin only
@@ -49,8 +34,7 @@ if ( ! function_exists( 'ot_get_option' ) ) {
 
 
 /* =Add Theme Options support
- * currently OptionsTree is used
--------------------------------------------------------------- */
+ * currently OptionsTree is used */
 
 /**
  * Filter option extraction for our theme
@@ -63,72 +47,78 @@ function ot_theme_option_adapter( $default, $key ) {
 }
 add_filter( 'theme_option', 'ot_theme_option_adapter', 10, 2 );
 
+
+
 /**
 * Options tree backend is for admin purposes only
+* --------------------------------------------------------------
 */
-if ( is_admin() ) {
+if ( !is_admin() )
+	return;
 
-	/**
-	 * Update theme options for current theme
-	 * providing public filter for options fields
-	 *
-	 * @return    void
-	 * @since     2.0
-	 */
-	add_action( 'admin_init', '_custom_theme_options', 1 );
-	function _custom_theme_options() {
-		$saved_settings = get_option( 'option_tree_settings', array() );
+if ( !file_exists( get_template_directory() . '/option-tree/ot-loader.php' ) )
+	wp_die('Please clone option-tree to the root directory from https://github.com/valendesigns/option-tree.git');
 
-		$custom_settings = array(
-			'sections' => array(),
-			'settings' => array()
-		);
+/**
+ * Update theme options for current theme
+ * providing public filter for options fields
+ *
+ * @return    void
+ * @since     2.0
+ */
+add_action( 'admin_init', '_custom_theme_options', 1 );
+function _custom_theme_options() {
+	$saved_settings = get_option( 'option_tree_settings', array() );
 
-		$custom_settings = apply_filters( 'populate_theme_options', $custom_settings );
+	$custom_settings = array(
+		'sections' => array(),
+		'settings' => array()
+	);
 
-		if ( $saved_settings !== $custom_settings ) {
-			update_option( 'option_tree_settings', $custom_settings );
-			wp_redirect(current_url());
-		}
+	$custom_settings = apply_filters( 'populate_theme_options', $custom_settings );
+
+	if ( $saved_settings !== $custom_settings ) {
+		update_option( 'option_tree_settings', $custom_settings );
+		wp_redirect(current_url());
 	}
-
-	/*
-	 * Allow using lists for options with title only fields
-	 */
-	add_filter( 'ot_list_item_settings', 'remove_default_slider_filelds', 12);
-	function remove_default_slider_filelds() {
-		return array();
-	}
-
-	/**
-	 * Add images ids to all sliders
-	 */
-	if ( function_exists( 'get_image_id_by_url' ) ) {
-		add_action('ot_after_theme_options_save', 'save_image_ids_in_lists');
-		function save_image_ids_in_lists() {
-			$options = get_option( 'option_tree' );
-			// find front_slides key
-			foreach ($options as $slider_key => $list) :
-				if (is_array($list))
-					foreach ($list as $list_item_key => $list_item)
-						if (is_array($list_item))
-							foreach ($list_item as $key => $value)
-								if (strpos($key, 'image')!==false AND 'image_id'!=$key)
-									$options[$slider_key][$list_item_key][$key.'_id'] = get_image_id_by_url($value);
-			endforeach;
-
-			$options = apply_filters( 'nys_save_options', $options );
-
-			update_option( 'option_tree', $options );
-		}
-	}
-
-	// Hide the settings & documentation pages.
-	add_filter( 'ot_show_pages', '__return_false' );
-
-	// Enable Theme mode
-	add_filter( 'ot_theme_mode', '__return_true' );
-
-	// Include OptionTree after providing all necessary filters
-	include_once( get_template_directory() . '/option-tree/ot-loader.php' );
 }
+
+/*
+ * Allow using lists for options with title only fields
+ */
+add_filter( 'ot_list_item_settings', 'remove_default_slider_filelds', 12);
+function remove_default_slider_filelds() {
+	return array();
+}
+
+/**
+ * Add images ids to all sliders
+ */
+if ( function_exists( 'get_image_id_by_url' ) ) {
+	add_action('ot_after_theme_options_save', 'save_image_ids_in_lists');
+	function save_image_ids_in_lists() {
+		$options = get_option( 'option_tree' );
+		// find front_slides key
+		foreach ($options as $slider_key => $list) :
+			if (is_array($list))
+				foreach ($list as $list_item_key => $list_item)
+					if (is_array($list_item))
+						foreach ($list_item as $key => $value)
+							if (strpos($key, 'image')!==false AND 'image_id'!=$key)
+								$options[$slider_key][$list_item_key][$key.'_id'] = get_image_id_by_url($value);
+		endforeach;
+
+		$options = apply_filters( 'nys_save_options', $options );
+
+		update_option( 'option_tree', $options );
+	}
+}
+
+// Hide the settings & documentation pages.
+add_filter( 'ot_show_pages', '__return_false' );
+
+// Enable Theme mode
+add_filter( 'ot_theme_mode', '__return_true' );
+
+// Include OptionTree after providing all necessary filters
+include_once( get_template_directory() . '/option-tree/ot-loader.php' );
