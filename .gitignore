@@ -1,10 +1,12 @@
 # folders and files to be ignored by git
 
 ############
-## Bones
+## Additional Theme Components
 ############
 
-Bones.esproj/
+option-tree/
+inc/assets/src/bower_components/
+inc/assets/src/node_modules/
 
 ############
 ## IDEs
@@ -51,6 +53,8 @@ tmp/
 temp/
 ._*
 .Trashes
+
+.sass-cache/
 
 .svn
 
